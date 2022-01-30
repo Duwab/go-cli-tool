@@ -6,6 +6,7 @@ import (
 	"log"
 	"math/rand"
 	"regexp"
+	"sort"
 	"strconv"
 	"time"
 )
@@ -14,7 +15,8 @@ func main() {
 	fmt.Println("Hello World!")
 	rand.Seed(time.Now().UTC().UnixNano()) // need to init the random seed
 	faces, numRoll := parseInput()
-	doRoll(faces, numRoll)
+	rolls := doRoll(faces, numRoll)
+	printRoll(rolls)
 }
 
 func parseInput() (faces int, numRoll int) {
@@ -40,9 +42,39 @@ func parseInput() (faces int, numRoll int) {
 	return faces, *rollFlag
 }
 
-func doRoll(faces int, numRoll int) {
+func doRoll(faces int, numRoll int) []int {
+	values := []int{}
 	for i := 0; i < numRoll; i++ {
 		roll := rand.Intn(faces) + 1
-		fmt.Printf("You rolled a %v\n", roll)
+		values = append(values, roll)
 	}
+	return values
+}
+
+func printRoll(rolls []int) {
+	fmt.Printf("\n\nRolls: %v\n", rolls)
+	for i, roll := range rolls {
+		fmt.Printf("(Roll.%v,%v) ", i+1, roll)
+	}
+	fmt.Printf("\n\nSum: %v\n", sumDices(rolls))
+	fmt.Printf("Highest: %v\n", highestRoll(rolls))
+	fmt.Printf("Lowest: %v\n", lowestRoll(rolls))
+}
+
+func sumDices(rolls []int) int {
+	sum := 0
+	for _, roll := range rolls {
+		sum += roll
+	}
+	return sum
+}
+
+func highestRoll(rolls []int) int {
+	sort.Ints(rolls)
+	return rolls[len(rolls)-1]
+}
+
+func lowestRoll(rolls []int) int {
+	sort.Ints(rolls)
+	return rolls[0]
 }
