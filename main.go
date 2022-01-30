@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	fmt.Printf("Hello World! (version: %v)\n", BuildVersion)
 	rand.Seed(time.Now().UTC().UnixNano()) // need to init the random seed
 	faces, numRoll := parseInput()
 	rolls := doRoll(faces, numRoll)

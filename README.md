@@ -16,7 +16,7 @@ goreleaser version 1.4.1
 ## Getting started
 
 ```
-go run main.go
+go run .
 go build
 ./dice-cli
 
