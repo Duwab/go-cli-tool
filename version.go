@@ -1,6 +1,7 @@
 package main
 
-// DO NOT UPDATE THIS FILE (AUTOMATICALLY UPDATED BY GITHUB WORKFLOW)
+// DO NOT UPDATE THIS FILE
+// goreleaser is configured to replace variable values during `before hooks`
 
 var (
 	BuildVersion string = ""
