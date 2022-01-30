@@ -34,10 +34,10 @@ The cli binaries will be available for platform.
 Example for linux:
 
 ```
-wget https://github.com/Duwab/go-cli-tool/releases/download/v0.0.4/go-cli-tool_0.0.4_Linux_x86_64.tar.gz
-sha256sum go-cli-tool_0.0.4_Linux_x86_64.tar.gz
+wget https://github.com/Duwab/go-cli-tool/releases/download/v0.0.5/go-cli-tool_0.0.5_Linux_x86_64.tar.gz
+sha256sum go-cli-tool_0.0.5_Linux_x86_64.tar.gz
 
-tar xzvf go-cli-tool_0.0.4_Linux_x86_64.tar.gz
+tar xzvf go-cli-tool_0.0.5_Linux_x86_64.tar.gz
 ./dice-cli
 ```
 
