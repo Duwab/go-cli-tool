@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=$(git tag)
+VERSION=$(git describe)
 BUILD_TIME=$(date)
 
 sed -i "s/BuildVersion string = \"[^\"]*\"/BuildVersion string = \"${VERSION}\"/" version.go
