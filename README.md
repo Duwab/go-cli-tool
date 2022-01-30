@@ -18,7 +18,7 @@ goreleaser version 1.4.1
 ```
 go run main.go
 go build
-./cli
+./dice-cli
 
 goreleaser init    # already done
 goreleaser release --snapshot --rm-dist
