@@ -23,3 +23,8 @@ go build
 goreleaser init    # already done
 goreleaser release --snapshot --rm-dist
 ```
+
+
+## Greetings
+
+Thanks to Mason Egger (@DigitalOcean) for [this Live tutorial](https://www.youtube.com/watch?v=PP4CVvgLXrU)
