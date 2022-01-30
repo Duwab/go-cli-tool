@@ -2,7 +2,8 @@ name: goreleaser
 
 on:
   pull_request:
-  push:
+  # push:
+  release:
 
 jobs:
   goreleaser:
